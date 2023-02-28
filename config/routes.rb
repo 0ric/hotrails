@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-resources :posts
-root to: "posts#index"
+  get 'pages/home'
+  resources :feedbacks
+  resources :posts
+  root to: "pages#home"
 end
+
+
