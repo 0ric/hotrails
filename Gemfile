@@ -7,6 +7,7 @@ ruby "3.1.3"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
+gem 'devise'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"

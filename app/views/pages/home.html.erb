@@ -1,2 +1,10 @@
 <h1>Bem vindo aos chamados</h1>
 <p>Crie seu chamado</p>
+<% if current_user %>
+    <p> Bem vindo <%= current_user.email%>!</p>
+    <p> texto grande </p>
+<% else %>
+    <p> você não está logado, por favor logar</p>
+    <%= link_to "Logar", new_user_session_path%>
+    <%= link_to "Crie sua Conta", new_user_registration_path%>
+    <% end %>
