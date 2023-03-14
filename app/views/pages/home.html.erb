@@ -1,2 +1,12 @@
 <h1>Bem vindo aos chamados</h1>
 <p>Crie seu chamado</p>
+<% if current_user %>
+    <p> Bem vindo <%= current_user.email%>!</p>
+    <p> você é um <%= current_user.role %></p>
+    <p> texto grande </p>
+    <%= link_to "Sair",destroy_user_session_path, 'data-turbo-method': :delete, class: "btn btn-danger"%>
+<% else %>
+    <p> você não está logado, por favor logar</p>
+    <%= link_to "Logar", new_user_session_path,class: "btn btn-primary"%>
+    <%= link_to "Crie sua Conta", new_user_registration_path,class: "btn btn-success"%>
+    <% end %>
